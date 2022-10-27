@@ -2,11 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Mukta:wght@600&display=swap');
 :root {
 
-  --main-bg-color : #FFFFFF;
-  --secondary-bg-color : #191919;
+  --main-bg-color : #151010;
+  --secondary-bg-color : #FFFF;
   --third-color : #999999;
   --button-color: #0055FF;
-  --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 4px 16px, #e1e1e1 0px 8px 16px;
+  --box-shadow: #e1e1e1 0px 1px 0px, #e1e1e1 0px 2px 8px, #e1e1e1 0px 4p x8px;
   --font-title : 'Mukta', sans-serif;
   --font-text :'Josefin Sans', sans-serif;
 }
@@ -22,6 +22,9 @@
   box-sizing: border-box;
   background-color: var(--main-bg-color);
   font-family: var(--font-text);
+  color: var(--secondary-bg-color);
+  overflow-x: hidden;
+  line-height: 1.6;
 }
 
 h1, h2 {
@@ -42,9 +45,17 @@ section {
   padding: 2rem 0;
 }
 
+article {
+  padding:  2rem;
+}
+
 .no_button {
   background-color: transparent;
   border: none;
+}
+
+video {
+  height: 80vh;
 }
 
 .flex {
@@ -104,10 +115,18 @@ section {
 .margin0r1r {
   margin: 0 1rem;
 }
+
+.padding0 {
+  padding: 0;
+}
+
+.relative {
+  position: relative;
+}
 /********************************************************************* NAV *********************************************************************/ 
 
 .openBurger {
-  z-index: 1;
+  z-index: 3;
   height: 100%;
   padding: 0 0 2rem;
   width: 100%;
@@ -154,11 +173,104 @@ button.croix {
   padding: 1rem 2rem 0.5rem 1rem;
 }
 
+.burger {
+  width: 2rem;
+}
+
+.logo {
+  width:  3rem;
+  height: 3rem;
+  border-radius: 50%;
+  box-shadow: var(--box-shadow);
+}
 /********************************************************************* HOME *********************************************************************/ 
 .main_container {
   padding: 1rem 3rem;
 }
 
+.main_h1 {
+  position: absolute;
+  background-color: transparent;
+  color: var(--secondary-bg-color);
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  top:50%
+}
+
+.main_h1 h1 {
+  font-size: 3rem;
+}
+
+.main_h1 h2 {
+  font-size: 0.85rem;
+}
+
+.main_h1 * {
+  background-color: transparent;
+}
+
+
+.veil {
+  background-color: var(--main-bg-color);
+  position: absolute;
+  height: 85vh;
+  width: 100%;
+  opacity: 40%;
+  z-index: 1;
+}
+.main_video {
+  margin-left: -5rem;
+  height: 85vh;
+}
+
+.a_propos {
+  background-color: var(--secondary-bg-color);
+color:var(--main-bg-color);
+padding: 3rem 2rem;
+}
+.a_propos * {
+padding: 0.75rem 0;
+background-color: inherit;
+color:inherit;
+}
+
+.a_propos h3 {
+  font-size: 1.5rem;
+}
+
+.trait {
+  border-bottom: var(--third-color) solid 1px;
+  width: 25vw;
+  margin-bottom: 2rem;
+
+}
+
+
+.homeData_container {
+  border-bottom: #e1e1e1 solid 1px ;
+}
+.veil2 {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top:0;
+  z-index: 1;
+  opacity: 60%;
+}
+.button_home {
+  position: absolute;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  border-radius: 0.25rem;
+  z-index: 2;
+  background-color: #DCA344;
+  color: var(--main-bg-color);
+}
 /********************************************************************* Page 1 *********************************************************************/ 
 
 
@@ -194,16 +306,23 @@ width: 90%;
 /********************************************************************* FOOTER *********************************************************************/ 
 
 .footer {
-  padding: 1rem 2rem;
-  align-items: flex-start;
+  padding: 1rem 4rem;
   background-color: var(--secondary-bg-color);
   color: var(--main-bg-color);
+  text-align: center;
+}
+
+.footer .grimoire {
+  padding: 0.25rem;
+  color: #0055FF;
+  background-color: transparent;
 }
 
 .footer * {
-  padding: 0.35rem 0;
+  margin: 0.35rem 0;
   background-color: inherit;
   color: inherit;
+  overflow-y: hidden;
 }
 
 .footer li, .footer a, .footer div {

@@ -1,29 +1,61 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import background from "../assets/barber.mp4";
+import homeData from "../data/homeData";
 
 export default function Home() {
   return (
     <main>
-      <h1>Hello this is Home</h1>
+      <section className="relative">
+        <div className="main_h1">
+          <h1>BARBER 902</h1>
+          <h2>Coiffeur et barbier pour homme</h2>
+        </div>
 
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
-        aliquid vel blanditiis. Iste earum tempore, corrupti distinctio nam
-        dignissimos incidunt eveniet in tempora libero! Possimus explicabo
-        architecto aut dolorem blanditiis magni porro maiores dignissimos
-        repellat rem voluptatum, magnam provident at illum atque fugit assumenda
-        eaque minima iste. Quaerat odit suscipit possimus nostrum, libero odio
-        est quo culpa tempore ex tenetur sed esse unde doloremque ea minus rerum
-        laboriosam eveniet labore ipsam voluptate officiis fugiat. Natus minima
-        voluptatem hic eum ad perferendis rerum animi, provident aliquid
-        quisquam, mollitia eaque enim eligendi consequatur nihil eveniet ex
-        corrupti delectus quidem consequuntur! Saepe repudiandae excepturi ut
-        atque dolorum quisquam voluptas laudantium sapiente, obcaecati
-        voluptatibus earum adipisci dolor maiores beatae delectus ab pariatur!
-        Fuga voluptatibus soluta quidem alias suscipit animi, nisi dolorum
-        adipisci veritatis veniam amet aut odio magni, nihil nobis fugit iste
-        expedita ut nulla quas consequuntur debitis? Nihil ipsam dicta saepe
-        temporibus molestiae!
-      </p>
+        <div className="veil" />
+        <video autoPlay muted loop className="main_video">
+          <source src={background} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
+
+      <article className="a_propos">
+        <h3>UNE EXPÉRIENCE INOUBLIABLE !</h3>
+        <p>
+          Situé à deux pas de la gare, sur les quais du quartier Malakoff, Ryad
+          et son équipe vous accueillent avec le sourire dans un salon au
+          mobilier tendance vintage qui vous donnerez envie de revenir toutes
+          les semaines.
+        </p>
+        <div className="trait" />
+        <p>
+          Installez-vous et laissez vous guider par les conseils avisés d’une
+          équipe de pros qui vous est entièrement dédiée. Demandez la coupe qui
+          vous fait envie et l’équipe du salon Barber 902 s’afférera pour
+          réaliser tous vos souhaits avec autant de passion que de savoir-faire.
+        </p>
+        <div className="trait" />
+        <p>
+          En plus d’une coupe de cheveux profitez-en aussi pour soigner votre
+          barbe avec des soins haut de gamme et une taille de barbe à l’ancienne
+          réalisée par un pro. Chez Barber 902 vous profiterez d’une ambiance
+          chaleureuse, avec une équipe toujours encline à rire avec les clients
+          pour mieux vous mettre à l’aise.
+        </p>
+      </article>
+      <section className="padding0">
+        {homeData.map((data) => (
+          <div className="relative homeData_container">
+            <img src={data.src} alt={data.alt} className="home_image" />
+            <Link to={data.link}>
+              <button type="button" className="button_home">
+                {data.title}
+              </button>
+            </Link>
+            <div className="veil2" />
+          </div>
+        ))}
+      </section>
     </main>
   );
 }
