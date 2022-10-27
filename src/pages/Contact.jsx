@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 
 function Contact() {
   useEffect(() => {
@@ -6,6 +7,9 @@ function Contact() {
   }, []);
   return (
     <div className="flex flex-col align-center justify-center">
+      <Helmet>
+        <title>Barber 902 | Contact </title>
+      </Helmet>
       <section className="reservation">
         <h1>Réservez dès maintenant au</h1>
 

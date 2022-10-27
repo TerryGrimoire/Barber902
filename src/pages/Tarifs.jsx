@@ -1,10 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import tarifData from "../data/tarifsData";
 
 function Tarifs() {
   return (
     <div className="tarifs_container">
+      <Helmet>
+        <title>Barber 902 | Nos tarifs </title>
+      </Helmet>
       <h1 className="h1">NOS TARIFS</h1>
       {tarifData.map((el) => (
         <div key={el.id} className="flex justify-between align-center tarif">

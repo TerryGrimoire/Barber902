@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import background from "../assets/barber.mp4";
 import homeData from "../data/homeData";
 import Facebook from "../assets/facebook.png";
@@ -9,6 +10,9 @@ import logo from "../assets/logo.jpg";
 export default function Home() {
   return (
     <main>
+      <Helmet>
+        <title>Barber 902 | Accueil </title>
+      </Helmet>
       <section className="relative desktop_landing">
         <div className="main_h1">
           <h1>
