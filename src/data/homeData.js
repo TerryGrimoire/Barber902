@@ -6,19 +6,20 @@ const homeData = [
   {
     id: 0,
     title: "Nos coupes",
-    link: "/coupes",
-    src: coupe,
-    alt: "homme noir qui se fait coiffer les cheveux au coiffeur",
-  },
-  {
-    id: 0,
-    title: "Nos services",
-    link: "/services",
+    link: "/coupe",
     src: services,
     alt: "Coiffeur coupant les cheveux a un enfant",
   },
   {
-    id: 0,
+    id: 1,
+    title: "Nos tarifs",
+    link: "/tarifs",
+    src: coupe,
+    alt: "homme noir qui se fait coiffer les cheveux au coiffeur",
+  },
+
+  {
+    id: 2,
     title: "Réserver",
     link: "/contact",
     src: contact,
