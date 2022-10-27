@@ -471,7 +471,6 @@ video.main_video {
   display: flex;
   align-items: center;
   background-color: var(--secondary-bg-color);
-  height: 110vh;
   padding: 1rem 6;
 }
 
